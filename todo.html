@@ -61,7 +61,6 @@
       newRow.insertCell(1).innerText = startDate;
       newRow.insertCell(2).innerText = dueDate;
 
-      // Priority style
       let priorityCell = newRow.insertCell(3);
       if (priority === "High") {
         priorityCell.innerHTML = `<span class="priority-high">High</span>`;
@@ -71,17 +70,16 @@
         priorityCell.innerHTML = `<span class="priority-low">Low</span>`;
       }
 
-      // Status
       newRow.insertCell(4).innerHTML = `<span class="status">In Progress</span>`;
 
-      // Actions
+  
       let actionsCell = newRow.insertCell(5);
       actionsCell.innerHTML = `
         <button class="action-btn edit-btn" onclick="editTask(this)">Edit</button>
         <button class="action-btn delete-btn" onclick="deleteTask(this)">Delete</button>
       `;
 
-      // Clear input fields
+    
       document.getElementById("taskName").value = "";
       document.getElementById("startDate").value = "";
       document.getElementById("dueDate").value = "";
